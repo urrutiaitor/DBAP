@@ -2,6 +2,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.xml.transform.Result;
+
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 
@@ -48,12 +50,15 @@ public class Main {
 		}
 		
 		String sql = "SELECT * FROM emp";
+		ResultSet result = null;
 		try {
-			ResultSet result = statement.executeQuery(sql);
+			result = statement.executeQuery(sql);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		System.out.println("Result: " + result.toString());
 
 	}
 

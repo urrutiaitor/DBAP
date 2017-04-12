@@ -1,4 +1,6 @@
+import java.util.Observable;
 
-public class InsertValues {
+
+public class InsertValues extends Observable {
 
 }
